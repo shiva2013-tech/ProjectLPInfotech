@@ -1,0 +1,53 @@
+﻿@model Setting
+
+@{
+    ViewData["Title"] = "_EditPartial";
+}
+<div class="modal fade" id="editData">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Create</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="Edit" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"> </div>
+                    <div class="form-group">
+                        <label asp-for="Key" class="control-label"></label>
+                        <input asp-for="Key" type ="text" class="form-control" />
+                        <span asp-validation-for="Key" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Value" class="control-label"></label>
+                        <input asp-for="Value" class="form-control" />
+                        <span asp-validation-for="Value" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Value2" class="control-label"></label>
+                        <input asp-for="Value2" class="form-control" />
+                        <span asp-validation-for="Value2" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Description" class="control-label"></label>
+                        <input asp-for="Description" class="form-control" />
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            Cancel
+                        </button>
+                        <button type="button" class="btn btn-primary" data-save="modal">
+                            Update
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

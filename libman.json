@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "bootstrap-modal@2.2.6",
+      "destination": "wwwroot/bootstrap-modal/"
+    },
+    {
+      "library": "popper.js@2.11.8",
+      "destination": "wwwroot/popper.js/"
+    },
+    {
+      "library": "bootstrap@4.5.3",
+      "destination": "wwwroot/css/bootstrap/"
+    }
+  ]
+}
